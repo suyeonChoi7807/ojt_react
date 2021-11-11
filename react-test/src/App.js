@@ -116,18 +116,50 @@ export default class App extends React.Component{
 */
 
 /* 함수형 컴포넌트 생성*/
+
+// import React from "react";
+// import './App.css';
+// import ImportComponent from "./ImportComponent";  /*추가*/
+
+// function App(){
+//   return (
+//     <div>
+//       <h1>React는 자바스크립트 라이브러리의 하나</h1>
+//       <p>함수형 컴포넌트 생성하기</p>
+//       <ImportComponent></ImportComponent> { /*추가*/ }
+//     </div>
+//   );
+// }
+
+
+/* props 실습 */
+/* <자식 컴포넌트 props_name="props_value"> */
+/*
+import React, {Component} from "react";
+import Payment from "./payment"; //자식component 사용
+import Wrapper from './Wrapper';
+
+//부모 component
+class App extends Component {
+  render(){
+    return(
+      <Wrapper>
+        <Payment amount="560000원" color="red" isSpecial={true} /> 
+      </Wrapper>
+    );
+  }
+}
+*/
+
+/* input 상태 관리하기 */
+import { render } from "@testing-library/react";
 import React from "react";
-import './App.css';
-import ImportComponent from "./ImportComponent"; /* 추가 */
+import InputSample from "./InputSample";
 
 function App(){
-  return (
-    <div>
-      <h1>React는 자바스크립트 라이브러리의 하나</h1>
-      <p>함수형 컴포넌트 생성하기</p>
-      <ImportComponent></ImportComponent> { /*추가*/ }
-    </div>
-  );
+    return(
+      <InputSample />
+    );
 }
 
 export default App;
